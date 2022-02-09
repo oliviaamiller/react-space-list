@@ -9,8 +9,6 @@ export default function OrbDetail() {
 
   useEffect(() => {
     async function fetch() {
-      console.log(params.name);
-
       const singleOrb = await getSingleOrb(params.name);
 
       setThisOrb(singleOrb);
@@ -32,7 +30,7 @@ export default function OrbDetail() {
         <p>semi-major axis: {thisOrb.semimajorAxis}</p>
         <p>sideral orbit:{thisOrb.sideralOrbit}</p>
         <p>perihelion: {thisOrb.perihelion}</p>
-        <p>sideral Rotation:{thisOrb.sideralRotation}</p>
+        <p>sideral rotation:{thisOrb.sideralRotation}</p>
         <p>aphelion: {thisOrb.aphelion}</p>
         <p>eccentricity: {thisOrb.eccentricity}</p>
         <p>inclination: {thisOrb.inclination}</p>
