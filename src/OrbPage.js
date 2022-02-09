@@ -31,6 +31,8 @@ export default function OrbPage() {
           onClick={() => setPage(page + 1)}
           disabled={orbs.length < onPage}>Next Page</button>
       </div>
+
+      <OrbList orbs={orbs}/>
     </div>
   );
 }
