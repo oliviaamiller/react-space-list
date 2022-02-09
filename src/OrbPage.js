@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getOrbs } from './services/fetch-utils';
 import OrbList from './OrbList';
+import './App.css';
 
 export default function OrbPage() {
   const [orbs, setOrbs] = useState([]);
@@ -20,7 +21,7 @@ export default function OrbPage() {
 
 
   return (
-    <div>
+    <div className='page'>
       <p>page {page}</p>
       <div className='page-buttons'>
         <button

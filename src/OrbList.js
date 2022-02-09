@@ -1,4 +1,5 @@
 import Orb from './Orb';
+import './App.css';
 
 export default function OrbList({ orbs }) {
   return (

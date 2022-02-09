@@ -1,4 +1,39 @@
+html, body, #root, .App {
+  background-color: rgb(10, 11, 17);
+}
+
 .App {
   text-align: center;
 }
 
+.App h2 {
+  color: white;
+
+}
+
+.page p{
+  color: white;
+}
+
+.orb-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.orb {
+  border: pink 1px solid;
+  cursor: pointer;
+}
+
+.page a:link {
+  text-decoration: none;
+}
+
+.page a:visited {
+  text-decoration: none;
+}
+
+.page a:hover {
+  color: pink;
+}
