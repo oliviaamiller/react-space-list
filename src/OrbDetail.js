@@ -8,35 +8,37 @@ export default function OrbDetail() {
 
   useEffect(() => {
     async function fetch() {
+      console.log(params.name);
+      
       const singleOrb = await getSingleOrb(params.name);
 
       setThisOrb(singleOrb);
     }
 
     fetch();
-  }, [params.id]);
+  }, [params.name]);
 
   return (
     <div>
       <Link to='/'>Home</Link>
       <div className='orb-detail'>
         <p>{thisOrb.name}</p>
-        <p>{thisOrb.escape}</p>
-        <p>{thisOrb.meanRadius}</p>
-        <p>{thisOrb.semimajorAxis}</p>
-        <p>{thisOrb.sideralOrbit}</p>
-        <p>{thisOrb.perihelion}</p>
-        <p>{thisOrb.sideralRotation}</p>
-        <p>{thisOrb.aphelion}</p>
-        <p>{thisOrb.discoveredBy}</p>
-        <p>{thisOrb.eccentricity}</p>
-        <p>{thisOrb.discoveryDate}</p>
-        <p>{thisOrb.inclination}</p>
         <p>{thisOrb.bodyType}</p>
-        <p>{thisOrb.massValue}</p>
-        <p>{thisOrb.massExponent}</p>
-        <p>{thisOrb.density}</p>
-        <p>{thisOrb.gravity}</p>
+        <p>discovered by: {thisOrb.discoveredBy}</p>
+        <p>discovered: {thisOrb.discoveryDate}</p>
+        <p>escape: {thisOrb.escape}</p>
+        <p>mean radius: {thisOrb.meanRadius}</p>
+        <p>semi-major axis: {thisOrb.semimajorAxis}</p>
+        <p>sideral orbit:{thisOrb.sideralOrbit}</p>
+        <p>perihelion: {thisOrb.perihelion}</p>
+        <p>sideral Rotation:{thisOrb.sideralRotation}</p>
+        <p>aphelion: {thisOrb.aphelion}</p>
+        <p>eccentricity: {thisOrb.eccentricity}</p>
+        <p>inclination: {thisOrb.inclination}</p>
+        <p>mass value: {thisOrb.massValue}</p>
+        <p>mass exponent: {thisOrb.massExponent}</p>
+        <p>density: {thisOrb.density}</p>
+        <p>gravity: {thisOrb.gravity}</p>
       </div>
     </div>
   );

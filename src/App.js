@@ -16,7 +16,7 @@ function App() {
           <Route exact path='/' >
             <OrbPage />
           </Route>
-          <Route exact path='/orb/:name'>
+          <Route exact path='/orbs/:name'>
             <OrbDetail />
           </Route>
         </Switch>
