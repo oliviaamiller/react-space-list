@@ -3,15 +3,14 @@ import './App.css';
 
 export default function Orb({ orb }) {
   return (
-    <Link to={`/orbs/${orb.name}`}>
-      <div className='orb'>
-        <p>{orb.name}</p>
+    <div className='orb'>
+      <Link to={`/orbs/${orb.name}`}>
+        <p className='orb-name'>{orb.name}</p>
         <p>{orb.bodyType}</p>
         <p>{orb.discoveryDate}</p>
-        <p>more info...</p>
-
-      </div>
-    </Link>
+        <p>more info...</p>  
+      </Link>
+    </div>
  
   );
 }

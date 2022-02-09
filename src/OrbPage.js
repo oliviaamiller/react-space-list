@@ -6,7 +6,7 @@ import './App.css';
 export default function OrbPage() {
   const [orbs, setOrbs] = useState([]);
   const [page, setPage] = useState(1);
-  const onPage = 40;
+  const onPage = 19;
 
   useEffect(() => {
     async function fetch() {

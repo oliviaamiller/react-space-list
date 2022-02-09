@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { getSingleOrb } from './services/fetch-utils';
+import './App.css';
 
 export default function OrbDetail() {
   const [thisOrb, setThisOrb] = useState({});
@@ -9,7 +10,7 @@ export default function OrbDetail() {
   useEffect(() => {
     async function fetch() {
       console.log(params.name);
-      
+
       const singleOrb = await getSingleOrb(params.name);
 
       setThisOrb(singleOrb);
@@ -22,7 +23,7 @@ export default function OrbDetail() {
     <div>
       <Link to='/'>Home</Link>
       <div className='orb-detail'>
-        <p>{thisOrb.name}</p>
+        <p className='orb-name'>{thisOrb.name}</p>
         <p>{thisOrb.bodyType}</p>
         <p>discovered by: {thisOrb.discoveredBy}</p>
         <p>discovered: {thisOrb.discoveryDate}</p>
