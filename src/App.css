@@ -1,38 +1,69 @@
-.App {
+html, body, #root, .App {
+  background-color: rgb(10, 11, 17);
+}
+
+.App{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.App h2 {
   color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+.page p{
+  color: rgb(134, 142, 162);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.orb-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0rem 2rem;
+}
+
+.orb {
+  margin: 1rem;
+  padding: 1rem;
+  border: pink 1px solid;
+  width: 10rem;
+  text-align: center;
+  
+}
+
+.orb-name {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.orb-detail {
+  color: white;
+  border: pink 1px solid;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+.orb:hover p{
+  animation: pulse 4s infinite alternate;
+}
+
+
+@keyframes pulse {
+  0% {
+      color: rgb(237, 153, 220);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+      color: rgb(255, 250, 109);
   }
+  100% {
+      color: rgb(209, 239, 242);
+  }
+
 }
